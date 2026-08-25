@@ -4,8 +4,9 @@ The Quilt ecosystem is a composition of small, focused repos. This
 repo is the entry point — it ties them all together and shows the
 full picture.
 
-## The 13 repos (as of Phase 5)
+## The 18+ repos (as of Phase 8)
 
+### The runtime (Python)
 | Repo | What it does | Status |
 |------|--------------|--------|
 | [quilt-substrate](https://github.com/SuperInstance/quilt-substrate) | Core 4D cell-graph with 13 openers | v4.0-cowboy-loop (snapshot) |
@@ -23,6 +24,17 @@ full picture.
 | [substrate-trainer](https://github.com/SuperInstance/substrate-trainer) | The substrate trainer | active |
 | [quilt-bathy](https://github.com/SuperInstance/quilt-bathy) | The bathy (depth) | active |
 | [quilt-ecosystem-demo](https://github.com/SuperInstance/quilt-ecosystem-demo) | End-to-end demo | active |
+
+### The foundation in 4 languages
+The 5-opcode VM is now ported to 4 languages. Same opcodes,
+same 8 polyformalisms, different metal.
+
+| Repo | Language | Performance | Use case |
+|------|----------|-------------|----------|
+| [quilt-vm-c](https://github.com/SuperInstance/quilt-vm-c) | C99 | **0.11ms** | Microcontrollers, OS kernels, the F/V EILEEN's tablet |
+| [quilt-vm-rust](https://github.com/SuperInstance/quilt-vm-rust) | Rust | ~0.5ms | Production servers, the cowboy's day job |
+| [quilt-vm-typescript](https://github.com/SuperInstance/quilt-vm-typescript) | TypeScript | ~1ms | Modern web, agents, Cordis-native |
+| [quilt-vm-haskell](https://github.com/SuperInstance/quilt-vm-haskell) | Haskell | TBD | Algebraic foundation, paper writers |
 
 ## The split
 

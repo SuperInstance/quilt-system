@@ -15,6 +15,7 @@ full picture.
 | [quilt-picker](https://github.com/SuperInstance/quilt-picker) | Learned opener selection (Wilson + heuristic prior) | v1.0.0 |
 | [quilt-casting](https://github.com/SuperInstance/quilt-casting) | Wilson + LinUCB model router, gale-aware | v1.0.0 |
 | [quilt-cordis](https://github.com/SuperInstance/quilt-cordis) | The bridge: Quilt cells ≡ Cordis plugins | v1.0.0 |
+| [quilt-foundation](https://github.com/SuperInstance/quilt-foundation) | The 5-opcode VM, foundation for all polyformalisms | v0.1.0 |
 | [quilt-saddle-bridge](https://github.com/SuperInstance/quilt-saddle-bridge) | Saddle ledger bridge (3 phases) | active |
 | [cell-runtime](https://github.com/SuperInstance/cell-runtime) | The cell runtime | active |
 | [porch](https://github.com/SuperInstance/porch) | The porch (entry point) | active |

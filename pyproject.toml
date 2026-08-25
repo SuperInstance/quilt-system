@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quilt-system"
+version = "1.0.0"
+description = "The Quilt ecosystem as a single import. Re-exports from quilt-substrate, quilt-cowboy, quilt-bus, quilt-state, quilt-picker, quilt-casting."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "SuperInstance"}]

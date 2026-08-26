@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" width="640" height="320">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="55%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <radialGradient id="moon" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#FDE68A" stop-opacity="0.9"/>
+      <stop offset="70%" stop-color="#FDE68A" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#FDE68A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="wagon" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#A78BFA"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="quiltTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F472B6"/>
+      <stop offset="100%" stop-color="#DB2777"/>
+    </linearGradient>
+    <pattern id="stars" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="20" r="0.7" fill="#E2E8F0" opacity="0.7"/>
+      <circle cx="45" cy="8"  r="0.5" fill="#E2E8F0" opacity="0.5"/>
+      <circle cx="70" cy="40" r="0.6" fill="#E2E8F0" opacity="0.6"/>
+      <circle cx="25" cy="55" r="0.4" fill="#E2E8F0" opacity="0.4"/>
+      <circle cx="60" cy="70" r="0.5" fill="#E2E8F0" opacity="0.5"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="640" height="320" fill="url(#sky)"/>
+  <rect width="640" height="320" fill="url(#stars)"/>
+
+  <!-- Moon -->
+  <circle cx="540" cy="80" r="60" fill="url(#moon)"/>
+  <circle cx="540" cy="80" r="22" fill="#FDE68A" opacity="0.95"/>
+
+  <!-- Distant mountains -->
+  <path d="M 0 230 L 70 180 L 130 210 L 200 165 L 280 200 L 360 170 L 430 205 L 510 175 L 580 200 L 640 185 L 640 260 L 0 260 Z"
+        fill="#1E293B" opacity="0.7"/>
+  <path d="M 0 250 L 90 220 L 170 240 L 250 215 L 340 235 L 420 220 L 510 240 L 600 225 L 640 235 L 640 280 L 0 280 Z"
+        fill="#0F172A" opacity="0.9"/>
+
+  <!-- Ground -->
+  <rect x="0" y="260" width="640" height="60" fill="url(#ground)"/>
+  <!-- Trail dashes -->
+  <path d="M 0 280 L 640 280" stroke="#475569" stroke-width="1" stroke-dasharray="2 8" opacity="0.6"/>
+
+  <!-- Wagon train: 4 wagons in a line, getting smaller to suggest depth -->
+  <!-- Wagon 1 (front, biggest) -->
+  <g transform="translate(120,205)">
+    <ellipse cx="40" cy="78" rx="45" ry="6" fill="#000" opacity="0.45"/>
+    <!-- Wagon body (canvas cover over a barrel arch) -->
+    <path d="M 0 70 L 0 25 Q 40 -5 80 25 L 80 70 Z" fill="url(#wagon)" stroke="#5B21B6" stroke-width="1.5"/>
+    <!-- Quilt cover draped over the canvas -->
+    <path d="M 6 28 Q 40 0 74 28 L 70 35 Q 40 8 10 35 Z" fill="url(#quiltTop)" stroke="#9D174D" stroke-width="0.8"/>
+    <!-- Quilt squares -->
+    <g fill="#FBCFE8" opacity="0.85">
+      <rect x="14" y="38" width="8" height="8"/>
+      <rect x="28" y="42" width="8" height="8"/>
+      <rect x="42" y="44" width="8" height="8"/>
+      <rect x="56" y="42" width="8" height="8"/>
+      <rect x="66" y="38" width="6" height="8"/>
+    </g>
+    <!-- Wheels -->
+    <circle cx="15" cy="70" r="11" fill="#1F2937" stroke="#9CA3AF" stroke-width="1.5"/>
+    <circle cx="15" cy="70" r="3" fill="#475569"/>
+    <circle cx="65" cy="70" r="11" fill="#1F2937" stroke="#9CA3AF" stroke-width="1.5"/>
+    <circle cx="65" cy="70" r="3" fill="#475569"/>
+    <!-- Tongue -->
+    <line x1="0" y1="55" x2="-25" y2="60" stroke="#78716C" stroke-width="3"/>
+  </g>
+
+  <!-- Wagon 2 -->
+  <g transform="translate(225,215) scale(0.85)">
+    <ellipse cx="40" cy="78" rx="45" ry="6" fill="#000" opacity="0.4"/>
+    <path d="M 0 70 L 0 25 Q 40 -5 80 25 L 80 70 Z" fill="url(#wagon)" stroke="#5B21B6" stroke-width="1.5"/>
+    <path d="M 6 28 Q 40 0 74 28 L 70 35 Q 40 8 10 35 Z" fill="url(#quiltTop)" stroke="#9D174D" stroke-width="0.8"/>
+    <circle cx="15" cy="70" r="11" fill="#1F2937" stroke="#9CA3AF" stroke-width="1.5"/>
+    <circle cx="65" cy="70" r="11" fill="#1F2937" stroke="#9CA3AF" stroke-width="1.5"/>
+    <line x1="0" y1="55" x2="-25" y2="60" stroke="#78716C" stroke-width="3"/>
+  </g>
+
+  <!-- Wagon 3 -->
+  <g transform="translate(320,222) scale(0.72)">
+    <ellipse cx="40" cy="78" rx="45" ry="6" fill="#000" opacity="0.4"/>
+    <path d="M 0 70 L 0 25 Q 40 -5 80 25 L 80 70 Z" fill="url(#wagon)" stroke="#5B21B6" stroke-width="1.5"/>
+    <path d="M 6 28 Q 40 0 74 28 L 70 35 Q 40 8 10 35 Z" fill="url(#quiltTop)" stroke="#9D174D" stroke-width="0.8"/>
+    <circle cx="15" cy="70" r="11" fill="#1F2937" stroke="#9CA3AF" stroke-width="1.5"/>
+    <circle cx="65" cy="70" r="11" fill="#1F2937" stroke="#9CA3AF" stroke-width="1.5"/>
+  </g>
+
+  <!-- Wagon 4 (smallest, far back) -->
+  <g transform="translate(400,228) scale(0.6)">
+    <path d="M 0 70 L 0 25 Q 40 -5 80 25 L 80 70 Z" fill="url(#wagon)" stroke="#5B21B6" stroke-width="1.5"/>
+    <path d="M 6 28 Q 40 0 74 28 L 70 35 Q 40 8 10 35 Z" fill="url(#quiltTop)"/>
+    <circle cx="15" cy="70" r="11" fill="#1F2937" stroke="#9CA3AF" stroke-width="1.5"/>
+    <circle cx="65" cy="70" r="11" fill="#1F2937" stroke="#9CA3AF" stroke-width="1.5"/>
+  </g>
+
+  <!-- Cowboy on the lead wagon's bench (the rider / the clock) -->
+  <g transform="translate(95,180)">
+    <!-- Body -->
+    <ellipse cx="22" cy="22" rx="6" ry="9" fill="#92400E"/>
+    <!-- Head -->
+    <circle cx="22" cy="9" r="5" fill="#FDE68A"/>
+    <!-- Hat brim -->
+    <ellipse cx="22" cy="5" rx="10" ry="2" fill="#78350F"/>
+    <!-- Hat crown -->
+    <path d="M 18 5 Q 18 -2 22 -2 Q 26 -2 26 5 Z" fill="#78350F"/>
+    <!-- Lasso / lead rope -->
+    <path d="M 0 22 Q -10 14 -20 18" stroke="#FDE68A" stroke-width="1.2" fill="none" opacity="0.8"/>
+  </g>
+
+  <!-- The 5 opcodes as 5 small rune stones along the trail -->
+  <g font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="9" font-weight="700">
+    <g transform="translate(60,255)">
+      <rect x="-2" y="-8" width="20" height="12" fill="#0F172A" stroke="#A78BFA" stroke-width="0.8" rx="1"/>
+      <text x="8" y="2" text-anchor="middle" fill="#A78BFA">P</text>
+    </g>
+    <g transform="translate(180,255)">
+      <rect x="-2" y="-8" width="20" height="12" fill="#0F172A" stroke="#A78BFA" stroke-width="0.8" rx="1"/>
+      <text x="8" y="2" text-anchor="middle" fill="#A78BFA">S</text>
+    </g>
+    <g transform="translate(290,255)">
+      <rect x="-2" y="-8" width="20" height="12" fill="#0F172A" stroke="#A78BFA" stroke-width="0.8" rx="1"/>
+      <text x="8" y="2" text-anchor="middle" fill="#A78BFA">A</text>
+    </g>
+    <g transform="translate(395,255)">
+      <rect x="-2" y="-8" width="20" height="12" fill="#0F172A" stroke="#A78BFA" stroke-width="0.8" rx="1"/>
+      <text x="8" y="2" text-anchor="middle" fill="#A78BFA">R</text>
+    </g>
+    <g transform="translate(490,255)">
+      <rect x="-2" y="-8" width="20" height="12" fill="#0F172A" stroke="#A78BFA" stroke-width="0.8" rx="1"/>
+      <text x="8" y="2" text-anchor="middle" fill="#A78BFA">W</text>
+    </g>
+  </g>
+
+  <!-- Title -->
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto" fill="#F8FAFC">
+    <text x="32" y="46" font-size="26" font-weight="800" letter-spacing="-0.5">quilt-system</text>
+    <text x="32" y="70" font-size="13" font-weight="500" fill="#A78BFA" letter-spacing="0.3">the wagon train — one import, the whole stack</text>
+  </g>
+
+  <!-- Subtitle / tag -->
+  <g font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="9" fill="#94A3B8">
+    <text x="32" y="92">import quilt        # 6 layers · 5 opcodes · 8 polyformalisms</text>
+  </g>
+
+  <!-- Bottom-right corner mark -->
+  <g font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="8" fill="#64748B">
+    <text x="608" y="306" text-anchor="end">v1.0.0 · MIT · the cowboy rides at the head</text>
+  </g>
+</svg>
